@@ -24,7 +24,6 @@ export default class Login extends Component {
     }
 
     handleSubmit = event => {
-        console.log("?")
         event.preventDefault();
     }
 
@@ -32,7 +31,7 @@ export default class Login extends Component {
         return (
             <div className="Login">
                 <Form onSubmit={this.handleSubmit}>
-                    <Form.Group controlId="email" bssize="large">
+                    <Form.Group controlId="email" bsSize="large">
                         <Form.Control
                             autoFocus
                             type="email"
@@ -40,7 +39,7 @@ export default class Login extends Component {
                             onChange={this.handleChange}
                         />
                     </Form.Group>
-                    <Form.Group controlId="password" bssize="large">
+                    <Form.Group controlId="password" bsSize="large">
                         <Form.Control
                             value={this.state.password}
                             onChange={this.handleChange}
@@ -49,7 +48,7 @@ export default class Login extends Component {
                     </Form.Group>
                     <Button
                         block
-                        bssize="large"
+                        bsSize="large"
                         disabled={!this.validateForm()}
                         type="submit"
                     >
